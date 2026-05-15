@@ -1,0 +1,25 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# API Keys
+*.key
+credentials.*
+
+# Cache
+*.cache
+__pycache__/
+*.pyc
+.cache/
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>广告日报</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>广告日报</h1>
+    <div class="date-range">
+      <input type="date" id="startDate">
+      <span>至</span>
+      <input type="date" id="endDate">
+      <button id="refreshBtn">刷新</button>
+    </div>
+  </header>
+
+  <section class="kpi-cards" id="kpiCards">
+    <div class="card">
+      <div class="card-title">展示量</div>
+      <div class="card-value" id="impressions">--</div>
+    </div>
+    <div class="card">
+      <div class="card-title">点击量</div>
+      <div class="card-value" id="clicks">--</div>
+    </div>
+    <div class="card">
+      <div class="card-title">消耗</div>
+      <div class="card-value" id="cost">--</div>
+    </div>
+    <div class="card">
+      <div class="card-title">转化数</div>
+      <div class="card-value" id="conversions">--</div>
+    </div>
+  </section>
+
+  <section class="chart-section">
+    <canvas id="trendChart"></canvas>
+  </section>
+
+  <section class="table-section">
+    <h2>渠道明细</h2>
+    <table id="channelTable">
+      <thead>
+        <tr>
+          <th>渠道</th>
+          <th>展示量</th>
+          <th>点击量</th>
+          <th>点击率</th>
+          <th>消耗</th>
+          <th>转化数</th>
+          <th>转化成本</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="suggestions" id="suggestions">
+    <h2>优化建议</h2>
+    <div id="suggestionList"></div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
